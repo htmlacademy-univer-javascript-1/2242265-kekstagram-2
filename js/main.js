@@ -19,5 +19,5 @@ function getRandomIntInclusive(min, max)
 
 }
 
-const result = getRandomIntInclusive(0, -2);
+getRandomIntInclusive(0, -2);
 
