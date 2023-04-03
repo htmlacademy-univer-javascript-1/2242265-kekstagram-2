@@ -1,23 +1,109 @@
+let arrImages = [];
+let lengthImages = 25;
+let lengthIdCommentStart = lengthImages + 1;
+let NAMES=[
+  "Дарья Рязанова",
+  "Валерий Ладогубец",
+  "Андрей Ботанов",
+  "Максим Богданов",
+  "Анна Азбукина",
+  "Виктория Ташбулатова"
+  ]
+let MESSAGE=[
+    "Всё отлично!",
+    "В целом всё неплохо. Но не всё.",
+    "Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.",
+    "Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.",
+    "Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.",
+    "Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!"
+  ];
 
-function getRandomIntInclusive(min, max)
+for (let i = 1; i <= 25; i++)
 {
-  if (min >= 0 &&  max>= 0 && min < max)
-  {
-    min = Math.ceil(min);
-    max = Math.floor(max);
+  let RandomLike = getRandomIntegerByRange(15, 200);
+  let ArrayComments = [];
 
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  for (let j = 1; j <= 6; j++)
+  {
+    let IdAvatar = getRandomIntegerByRange(1, 6);
+    let messageIndex = getRandomIntegerByRange( 0, MESSAGE.length - 1);
+    let namesIndex = getRandomIntegerByRange( 0, NAMES.length - 1);
+
+    let CommentObject = {
+      id: lengthIdCommentStart++,
+      avatar: `img/avatar-${IdAvatar}.svg`,
+      message: MESSAGE[messageIndex],
+      name: NAMES[namesIndex],
+    }
+
+    ArrayComments.push(CommentObject);
   }
 
-  if (min>max)
-  {
-    return 'Incorrect order of values!';
-  }
-  {
-    return 'Negative number!';
+  let object = {
+    id: i,
+    url: `photos/${i}.jpg`,
+    description: "Здесь находится описание фотографии",
+    likes: RandomLike,
+    comments: ArrayComments,
   }
 
+  arrImages.push(object);
 }
 
-getRandomIntInclusive(0, -2);
+
+console.log(arrImages);
+
+
+
+// console.log(arrImages);
+// console.log(ArrayComments);
+
+
+function getRandomIntegerByRange(min, max)
+{
+  return Math.floor( Math.random() * (max - min) + min );
+}
+
+//   getRandomIdAvatarComments(1, 6);
+
+// let RandomIndexMessage = Math.random()*MESSAGE.length;
+// RandomMessage = MESSAGE[RandomIndex];
+
+// let RandomIndexName = Math.random()*NAMES.length;
+// RandomName = NAMES[RandomIndexName];
+
+// let RandomIndexComments = Math.random()*ArrayComments.length;
+// let RandomComment = ArrayComments[RandomIndexComments];
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function generateComments()
+// {
+//   let ArrayComments = [];
+
+//   for (let j = 1; j <= 6; j++)
+//   {
+//     let CommentObject=
+//     {
+//       id: j,
+//       avatar: `img/avatar-${IdAvatar}.svg`,
+//       message: RandomMessage,
+//       name: RandomName,
+//     }
+
+//     ArrayComments.push(CommentObject);
+//   }
+
+//   return ArrayComments;
+// }
 
