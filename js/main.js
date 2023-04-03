@@ -17,7 +17,6 @@ let MESSAGE=[
     "Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.",
     "Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!"
   ];
-
 for (let i = 1; i <= 25; i++)
 {
   let RandomLike = getRandomIntegerByRange(15, 200);
@@ -46,11 +45,8 @@ for (let i = 1; i <= 25; i++)
     likes: RandomLike,
     comments: ArrayComments,
   }
-
   arrImages.push(object);
 }
-
-
 function getRandomIntegerByRange(min, max)
 {
   return Math.floor( Math.random() * (max - min) + min );
