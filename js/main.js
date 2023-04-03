@@ -50,60 +50,9 @@ for (let i = 1; i <= 25; i++)
   arrImages.push(object);
 }
 
-
-console.log(arrImages);
-
-
-
-// console.log(arrImages);
-// console.log(ArrayComments);
-
-
 function getRandomIntegerByRange(min, max)
 {
   return Math.floor( Math.random() * (max - min) + min );
 }
 
-//   getRandomIdAvatarComments(1, 6);
-
-// let RandomIndexMessage = Math.random()*MESSAGE.length;
-// RandomMessage = MESSAGE[RandomIndex];
-
-// let RandomIndexName = Math.random()*NAMES.length;
-// RandomName = NAMES[RandomIndexName];
-
-// let RandomIndexComments = Math.random()*ArrayComments.length;
-// let RandomComment = ArrayComments[RandomIndexComments];
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function generateComments()
-// {
-//   let ArrayComments = [];
-
-//   for (let j = 1; j <= 6; j++)
-//   {
-//     let CommentObject=
-//     {
-//       id: j,
-//       avatar: `img/avatar-${IdAvatar}.svg`,
-//       message: RandomMessage,
-//       name: RandomName,
-//     }
-
-//     ArrayComments.push(CommentObject);
-//   }
-
-//   return ArrayComments;
-// }
 
