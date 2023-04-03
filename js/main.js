@@ -50,6 +50,7 @@ for (let i = 1; i <= 25; i++)
   arrImages.push(object);
 }
 
+
 function getRandomIntegerByRange(min, max)
 {
   return Math.floor( Math.random() * (max - min) + min );
